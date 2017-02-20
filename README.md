@@ -1,25 +1,9 @@
-# README
+#Mock-SNS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simulate a social media friends list.
 
-Things you may want to cover:
 
-* Ruby version
+### API Documentation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# mock-sns
+- GET all users: `https://still-falls-98852.herokuapp.com/users`
+- GET single user: `https://still-falls-98852.herokuapp.com/users/{id}`

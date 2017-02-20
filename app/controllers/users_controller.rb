@@ -5,11 +5,16 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    render json: @users, :include => {:friendships => {:only => :friend_id}}
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
+    # @user = @user.include(Friendship.where(user_id: params[:id]))
+    render json: @user, :include => {:friendships => {:only => :friend_id}}
   end
 
   # GET /users/new
