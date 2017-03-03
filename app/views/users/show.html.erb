@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Profile picture:</strong><br/>
+  <img src="<%= @user.profile_picture %>">
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @user.first_name %>
 </p>
@@ -11,13 +16,19 @@
 </p>
 
 <p>
-  <strong>Birthday:</strong>
-  <%= @user.birthday %>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
 </p>
 
 <p>
-  <strong>Profile picture:</strong>
-  <%= @user.profile_picture %>
+  <strong>Email:</strong>
+  <%= @user.user_email %>
+</p>
+
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
 </p>
 
 <p>
@@ -34,8 +45,10 @@
 <ul>
   <% for friendship in @user.friendships %>
       <li>
-        <%= h friendship.friend.first_name %>
-        <%= h friendship.friend.last_name %>
+        <a href="<%= h user_path(friendship.friend)%>">
+          <%= h friendship.friend.first_name %>
+          <%= h friendship.friend.last_name %>
+        </a>
       </li>
   <% end %>
 </ul>
