@@ -14,9 +14,16 @@
   university = Faker::University.name
   work = Faker::Company.name
 
+  if n % 2 == 0
+    gender = "male"
+  else
+    gender = "female"
+  end
+
   email = "example-#{n+1}@mocksns.com"
   User.create!(first_name:  first_name,
                last_name: last_name,
+               gender: gender,
                user_email: user_email,
                birthday: birthday,
                profile_picture: "https://randomuser.me/api/portraits/women/99.jpg",
