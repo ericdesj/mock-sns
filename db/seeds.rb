@@ -16,8 +16,10 @@
 
   if n % 2 == 0
     gender = "male"
+    profile_picture = "https://randomuser.me/api/portraits/men/#{Random.rand(1..99)}.jpg"
   else
     gender = "female"
+    profile_picture = "https://randomuser.me/api/portraits/women/#{Random.rand(1..99)}.jpg"
   end
 
   email = "example-#{n+1}@mocksns.com"
@@ -26,7 +28,7 @@
                gender: gender,
                user_email: user_email,
                birthday: birthday,
-               profile_picture: "https://randomuser.me/api/portraits/women/99.jpg",
+               profile_picture: profile_picture,
                education: university,
                work: work)
 end
