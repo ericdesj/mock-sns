@@ -1,4 +1,4 @@
-#Mock-SNS
+# Mock-SNS
 
 Simulate a social media friends list.
 
@@ -10,3 +10,6 @@ Simulate a social media friends list.
 ### API Documentation
 - GET all users: [`https://still-falls-98852.herokuapp.com/users.json`](https://still-falls-98852.herokuapp.com/users.json)
 - GET single user: [`https://still-falls-98852.herokuapp.com/users/{id}.json`](https://still-falls-98852.herokuapp.com/users/1.json)
+
+### Visualization Tool
+Built using SigmaJS available [here](http://web.cs.dal.ca/~anunes/usp/visualizer/)
